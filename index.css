@@ -1,0 +1,75 @@
+header {
+    background-color: #2B2D42;
+    color: #8D99AE;
+    padding: 20px;
+    grid-area: header;
+    font-family: "Silkscreen", sans-serif;
+    justify-content: center; 
+    align-items: center; 
+    height: 60em; 
+    text-align: center; 
+}
+
+nav {
+    background-color: #8D99AE;
+    grid-area: nav;
+    font-family: "Aldrich", sans-serif;
+}
+
+main {
+    background-color: #EDF2F4;
+    color: #8D99AE;
+    grid-area: main;
+    font-family: "Aldrich", sans-serif;
+}
+
+aside {
+    background-color: #EF233C;
+    color:#8D99AE;
+    grid-area: aside;   
+    font-family: "Aldrich", sans-serif;
+}
+
+footer {
+    background-color: #D90429;
+    color: #8D99AE;
+    grid-area: footer;
+    font-family: "Aldrich", sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;   
+    grid-template-areas:
+        "nav nav nav nav"
+        "header header header header"
+        "main main main main"
+        "aside aside aside aside"
+        "footer footer footer footer";
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+width: 15em;
+}
+
+.silkscreen-regular {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.aldrich-regular {
+    font-family: "Aldrich", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
