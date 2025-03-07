@@ -76,6 +76,16 @@ width: 15em;
     font-style: normal;
 }
 
-body > header > h1{
-    font-size: 5em;
-}
+@keyframes colorLoop {
+    0% { color: #2B2D42; }  /* Red */
+    25% { color: #8D99AE; } /* Green */
+    50% { color: #EDF2F4; } /* Blue */
+    75% { color: #EF233C; } /* Purple */
+    100% { color: #D90429; } /* Back to Red */
+  }
+  
+  h1 {
+    font-size: 5rem;
+    text-align: center;
+    animation: colorLoop 5s infinite linear; /* Smooth looping */
+  }
