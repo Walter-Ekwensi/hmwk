@@ -8,6 +8,8 @@ header {
     align-items: center; 
     height: 60em; 
     text-align: center; 
+    
+    
 }
 
 nav {
@@ -21,6 +23,7 @@ main {
     color: #8D99AE;
     grid-area: main;
     font-family: "Aldrich", sans-serif;
+    text-align: center;
 }
 
 aside {
@@ -73,3 +76,6 @@ width: 15em;
     font-style: normal;
 }
 
+body > header > h1{
+    font-size: 5em;
+}
