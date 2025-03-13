@@ -94,9 +94,9 @@ h1 {
     height: 50px;	
     overflow: hidden;
     position: relative;
-    background: yellow;
-    color: orange;
-    border: 1px solid orange;
+    background: #EF233C;
+    color: #8D99AE;
+    border: 1px solid #D90429;
 }
 
 .scroll-left p {
