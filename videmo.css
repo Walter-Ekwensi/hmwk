@@ -1,0 +1,219 @@
+header {
+    background-color: #2B2D42;
+    color: #8D99AE;
+    padding: 20px;
+    grid-area: header;
+    font-family: "Silkscreen", sans-serif;
+    justify-content: center; 
+    align-items: center; 
+    height: 60em; 
+    text-align: center; 
+
+    
+}
+
+nav {
+    background-color: #8D99AE;
+    grid-area: nav;
+    font-family: "Aldrich", sans-serif;
+
+}
+
+main {
+    background-color: #EDF2F4;
+    color: #8D99AE;
+    grid-area: main;
+    font-family: "Aldrich", sans-serif;
+    text-align: center;
+}
+
+aside {
+    background-color: #EF233C;
+    color:#8D99AE;
+    grid-area: aside;   
+    font-family: "Aldrich", sans-serif;
+}
+
+footer {
+    background-color: #D90429;
+    color: #8D99AE;
+    grid-area: footer;
+    font-family: "Aldrich", sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;   
+    grid-template-areas:
+        "nav nav nav nav"
+        "header header header header"
+        "main main main main"
+        "aside aside aside aside"
+        "footer footer footer footer";
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    display: flex;
+    align-items: center; 
+    gap: 0.5em; 
+    text-decoration: none;
+    font-size: 1em;
+    color: #EDF2F4;
+}
+nav a.activePage {/*highlight the tab ur on with red*/
+    font-weight: bold;
+    color: #EF233C; 
+    border-bottom: .2em solid #D90429; 
+    background-image: linear-gradient(45deg, #A0031D, #EDF2F4, #EF233C, #EDF2F4, #D90429, #EDF2F4, #A0031D);
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: colorText 5s infinite ease-in-out;
+}
+
+nav img {
+    width: 2em;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    #menu > a{
+        display: none;
+    }
+}
+
+img {
+width: 15em;
+}
+
+.silkscreen-regular {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.aldrich-regular {
+    font-family: "Aldrich", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@keyframes colorText {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 {/*learnt this on youtube*/
+    font-size: 5rem;
+    text-align: center;
+    background-image: linear-gradient(45deg, #2B2D42, #8D99AE, #EDF2F4, #EF233C, #D90429);
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: colorText 5s infinite ease-in-out;
+}
+
+p {
+    font-size: 1rem;
+    text-align: center;
+    background-image: linear-gradient(45deg, #2B2D42, #8D99AE, #EDF2F4);
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: colorText 5s infinite ease-in-out;
+    /*looked nice so im using it for everything*/
+}
+
+
+.banner {/*making a moving banner learnt this on the html teaching site*/
+    height: 50px;	
+    overflow: hidden;
+    position: relative;
+    background-color: #A0031D;
+    border: 1px dotted #A0031D;
+    color: #EDF2F4;
+}
+.banner ul {
+    display: flex;
+    position: absolute;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    line-height: 50px;
+    gap: 100em;
+    animation: scroll-left 400s linear infinite; 
+}
+
+.banner ul li {
+    font-style: italic;
+    white-space: nowrap;
+    padding: 0 2em; 
+    flex-shrink: 0;
+}
+
+
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+aside ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+aside li {
+    font-style: italic;
+    white-space: nowrap;
+    min-width: 10em; 
+    flex-shrink: 0; 
+}
+
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Make it responsive */
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.video-container iframe {
+
+    border: 3px solid #8D99AE;
+    border-radius: 8px;
+}
+
+/* Adjust size for smaller screens */
+@media (max-width: 768px) {
+    .video-container {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-container {
+        max-width: 100%;
+    }
+}
